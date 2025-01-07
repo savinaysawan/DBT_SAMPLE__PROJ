@@ -42,3 +42,13 @@ models:
       +materialized: Table
       +database: TRANSFORMATION_DB
       +schema: RAW_SCH
+    raw_data:  # folder name in model where we need to implement Log details
+      +pre-hook: # pre_hook statement to load data into status table before model starts 
+        - "INSERT INTO TRANSFORMATION_DB.RAW_SCH.DBT_MODEL_STATUS 
+          (model_name, model_start_time, model_status)
+          VALUES ('{{this}}', CURRENT_TIMESTAMP, 'started');"
+      +post-hook: # post_hook statement to load data into status table after model completed
+        - "INSERT INTO TRANSFORMATION_DB.RAW_SCH.DBT_MODEL_STATUS 
+          (model_name, model_start_time, model_status)
+          VALUES ('{{this}}', CURRENT_TIMESTAMP, 'completed');"
+

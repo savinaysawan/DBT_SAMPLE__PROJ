@@ -1,0 +1,12 @@
+version: 2
+
+# Define the models in the project
+models:
+  - name: raw_customers_tbl
+    description: "Contains details about customers, including their demographic information."
+    columns:
+      - name: CUSTOMERID
+        description: "A unique identifier for each customer."
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,6 @@
+Direction,Year,Date,Weekday,Country,Commodity,Transport_Mode,Measure,Value,Cumulative
+Exports,2021,1/1/2021,Friday,All,All,All,$,85000000,85000000
+Exports,2021,2/1/2021,Saturday,All,All,All,$,132000000,216000000
+Exports,2021,3/1/2021,Sunday,All,All,All,$,165000000,381000000
+Exports,2021,4/1/2021,Monday,All,All,All,$,87000000,468000000
+Exports,2021,5/1/2021,Tuesday,All,All,All,$,86000000,554000000
